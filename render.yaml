@@ -1,0 +1,17 @@
+# render.yaml
+services:
+  - type: web
+    name: property-listing-backend
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    env: node
+    envVars:
+      - key: MONGODB_URI
+        value: your-mongodb-uri
+      - key: REDIS_URL
+        value: your-redis-url
+      - key: JWT_SECRET
+        value: your-jwt-secret
+      - key: PORT
+        value: 3000
